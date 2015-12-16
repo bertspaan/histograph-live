@@ -5,3 +5,25 @@ Live coding demo of https://github.com/histograph/ and https://github.com/graphm
 Made for http://www.meetup.com/nycneo4j/events/226972837/.
 
 Slides: http://bertspaan.nl/nypl-talks/nyc-neo4j
+
+## Usage
+
+Install Elasticsearch, Neo4j, Histograph: https://github.com/histograph/installation
+
+Delete existing data:
+
+- `rm -rf ./histograph`
+- `curl -XDELETE 'http://localhost:9200/*'`
+- `redis-cli FLUSHALL`
+- `MATCH (n) OPTIONAL MATCH (n)-[e]-() DELETE e, n RETURN DISTINCT true;`
+- `CREATE CONSTRAINT ON (n:_) ASSERT n.id IS UNIQUE`
+
+Start Core, API, and imports, with shell scripts:
+
+- `./core.sh`
+- `./api.sh`
+- `./watch.sh`
+
+Go to http://localhost:7474/browser/, and keep executing Cypher queries:
+
+    MATCH (p) WHERE p:_ OR p:`=` RETURN p
