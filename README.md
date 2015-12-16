@@ -12,18 +12,21 @@ Install Elasticsearch, Neo4j, Histograph: https://github.com/histograph/installa
 
 Delete existing data:
 
-- `rm -rf ./histograph`
-- `curl -XDELETE 'http://localhost:9200/*'`
-- `redis-cli FLUSHALL`
-- `MATCH (n) OPTIONAL MATCH (n)-[e]-() DELETE e, n RETURN DISTINCT true;`
-- `CREATE CONSTRAINT ON (n:_) ASSERT n.id IS UNIQUE`
+    rm -rf ./histograph`
+    curl -XDELETE 'http://localhost:9200/*'
+    redis-cli FLUSHALL
+
+And execute the following Cypher queries:
+
+    MATCH (n) OPTIONAL MATCH (n)-[e]-() DELETE e, n RETURN DISTINCT true;
+    CREATE CONSTRAINT ON (n:_) ASSERT n.id IS UNIQUE
 
 Start Core, API, and imports, with shell scripts:
 
-- `./core.sh`
-- `./api.sh`
-- `./watch.sh`
+    ./core.sh
+    ./api.sh
+    ./watch.sh
 
-Go to http://localhost:7474/browser/, and keep executing Cypher queries:
+Go to [http://localhost:7474/](http://localhost:7474/), and keep executing Cypher queries:
 
     MATCH (p) WHERE p:_ OR p:`=` RETURN p
