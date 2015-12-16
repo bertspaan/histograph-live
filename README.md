@@ -12,7 +12,7 @@ Install Elasticsearch, Neo4j, Histograph: https://github.com/histograph/installa
 
 Delete existing data:
 
-    rm -rf ./histograph`
+    rm -rf ./histograph
     curl -XDELETE 'http://localhost:9200/*'
     redis-cli FLUSHALL
 
