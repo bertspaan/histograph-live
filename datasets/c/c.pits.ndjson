@@ -1,0 +1,7 @@
+{"name": "Noord-Holland", "type": "hg:Province", "id": "noord-holland"}
+{"name": "Zuid-Holland", "type": "hg:Province", "id": "zuid-holland"}
+{"name": "Holland", "type": "hg:Country", "id": "holland"}
+{"name": "The Netherlands", "type": "hg:Country", "id": "netherlands"}
+{"name": "Pays-Bas", "type": "hg:Country", "id": "pays-bas"}
+{"name": "AmStErDaM", "type": "hg:Place", "id": "amsterdam"}
+{"name": "Nederland", "type": "hg:Country", "id": "nederland"}

@@ -1,0 +1,37 @@
+api:
+  dataDir: ./histograph
+  baseUrl: http://localhost:3001/
+  admin:
+    name: histograph
+    password: loy1ryod1cet
+
+import:
+  dirs:
+    - ./datasets
+
+core:
+  batchSize: 500
+
+stats:
+  enabled: false
+
+schemas:
+  baseUri: http://bertspaan.nl/
+  baseType: PlaceInTime
+
+  types:
+    - hg:Address
+    - hg:Building
+    - hg:Street
+    - hg:Neighbourhood
+    - hg:Place
+    - hg:Municipality
+    - hg:Water
+    - hg:Province
+    - hg:Country
+
+  relations:
+    - hg:sameAs
+    - hg:liesIn
+
+  equivalence: hg:sameAs

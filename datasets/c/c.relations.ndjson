@@ -1,0 +1,5 @@
+{"from":"noord-holland", "to": "nederland", "type": "hg:liesIn"}
+{"from":"zuid-holland", "to": "nederland", "type": "hg:liesIn"}
+{"from":"nederland", "to": "holland", "type": "hg:sameAs"}
+{"from":"nederland", "to": "netherlands", "type": "hg:sameAs"}
+{"from":"nederland", "to": "pays-bas", "type": "hg:sameAs"}
